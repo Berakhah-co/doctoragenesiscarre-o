@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dra. Génesis Carreño | Pediatra Puericultor - Cuidado con Amor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome for standard icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Animate.css for animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-dark': '#3e3c56',
+                        'brand-purple': '#8e84ad',
+                        'brand-purple-light': '#f0ecf9',
+                        'brand-gold': '#d4af37',
+                        'brand-mint': '#e8f5f1',
+                        'brand-bg': '#fdfcfb',
+                    },
+                    fontFamily: {
+                        'serif': ['"Playfair Display"', 'serif'],
+                        'sans': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fdfcfb;
+            color: #3e3c56;
+        }
+        h1, h2, h3, h4, h5, h6, .font-serif {
+            font-family: '"Playfair Display"', serif;
+        }
+        
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .hero-gradient {
+            background: linear-gradient(rgba(253, 252, 251, 0.8), rgba(253, 252, 251, 0.4)), url('images/dra_genesis_banner_variant_v3_1774305720970.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #8e84ad;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            z-index: 1000;
+            transition: transform 0.3s ease;
+        }
+        .floating-whatsapp:hover {
+            transform: scale(1.1);
+        }
+
+        /* Custom underline for headings */
+        .elegant-underline {
+            position: relative;
+            display: inline-block;
+        }
+        .elegant-underline::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: #d4af37;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden">
+
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 glass shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-brand-purple-light to-brand-gold/20 flex items-center justify-center">
+                        <i class="fa-solid fa-baby-carriage text-brand-purple text-lg"></i>
+                    </div>
+                    <span class="text-xl font-serif font-bold text-brand-dark tracking-tight">Dra. Génesis Carreño</span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-10 items-center">
+                    <a href="#" class="nav-link text-brand-dark font-medium text-sm">Inicio</a>
+                    <a href="#about" class="nav-link text-gray-500 font-medium text-sm">Sobre Mí</a>
+                    <a href="#servicios" class="nav-link text-gray-500 font-medium text-sm">Servicios</a>
+                    <a href="#galeria" class="nav-link text-gray-500 font-medium text-sm">Galería</a>
+                    <a href="#contacto" class="nav-link text-gray-500 font-medium text-sm">Contáctanos</a>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="hidden md:flex">
+                    <a href="https://wa.me/584148533702" target="_blank" class="bg-brand-purple hover:bg-brand-dark text-white px-7 py-3 rounded-full font-medium text-sm transition-all shadow-md hover:shadow-lg transform active:scale-95">
+                        Agendar Cita
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-brand-dark focus:outline-none">
+                        <i class="fa-solid fa-bars-staggered text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[85vh] flex items-center hero-gradient overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10 w-full">
+            <div class="max-w-2xl animate__animated animate__fadeInLeft">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-brand-purple-light text-brand-purple text-xs font-bold uppercase tracking-widest mb-6">Pediatra Puericultor</span>
+                <h1 class="text-6xl lg:text-7xl font-serif text-brand-dark leading-tight mb-8">
+                    Cuidando el futuro <br/>
+                    con <span class="italic text-brand-purple">amor y excelencia</span>
+                </h1>
+                <p class="text-lg text-gray-600 mb-10 leading-relaxed max-w-lg">
+                    Brindamos una atención integral para el desarrollo saludable de tus hijos, desde sus primeros pasos hasta la adolescencia.
+                </p>
+                <div class="flex flex-wrap gap-5">
+                    <a href="#contacto" class="bg-brand-gold hover:bg-yellow-600 text-white px-10 py-4 rounded-full font-semibold transition-all shadow-xl hover:-translate-y-1">
+                        Reservar Consulta
+                    </a>
+                    <a href="#servicios" class="bg-white/80 backdrop-blur hover:bg-white text-brand-dark px-10 py-4 rounded-full font-semibold transition-all border border-gray-100 shadow-sm">
+                        Ver Servicios
+                    </a>
+                </div>
+                
+                <!-- Simple Badges -->
+                <div class="mt-16 flex items-center gap-8 border-t border-gray-200/50 pt-8">
+                    <div>
+                        <span class="block text-2xl font-bold text-brand-dark">10+</span>
+                        <span class="text-xs text-gray-400 font-medium uppercase tracking-tighter">Años Experiencia</span>
+                    </div>
+                    <div class="h-8 w-px bg-gray-200"></div>
+                    <div>
+                        <span class="block text-2xl font-bold text-brand-dark">1K+</span>
+                        <span class="text-xs text-gray-400 font-medium uppercase tracking-tighter">Pacientes Felices</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-20">
+                <div class="w-full lg:w-1/2 relative">
+                    <div class="absolute -top-10 -left-10 w-40 h-40 bg-brand-mint rounded-full -z-10 animate-pulse"></div>
+                    <div class="relative group">
+                        <img src="images/dra_genesis_final_portrait_1774305329455.png" alt="Dra. Génesis Carreño" class="w-full h-auto rounded-[3rem] shadow-2xl transition duration-500 group-hover:scale-[1.02]" />
+                        <div class="absolute -bottom-8 -right-8 glass p-6 rounded-2xl shadow-xl max-w-[200px]">
+                            <p class="text-xs font-semibold text-brand-purple uppercase mb-1">Especialista en</p>
+                            <p class="text-sm font-bold text-brand-dark">Pediatría y Puericultura</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 animate__animated animate__fadeInRight">
+                    <h2 class="text-4xl lg:text-5xl font-serif text-brand-dark mb-8 elegant-underline">Sobre la Doctora</h2>
+                    <div class="space-y-6 text-gray-600 leading-loose text-lg">
+                        <p>
+                            Soy la <strong>Dra. Génesis Carreño</strong>, una pediatra apasionada por el bienestar infantil. Mi compromiso es ofrecer una atención médica de la más alta calidad, fundamentada en la empatía y la actualización científica constante.
+                        </p>
+                        <p>
+                            Entiendo que cada niño es un mundo y cada familia tiene necesidades únicas. Por ello, mi enfoque se centra en la <strong>prevención y el acompañamiento integral</strong>, guiando a los padres en el hermoso camino de ver crecer a sus hijos sanos y felices.
+                        </p>
+                        <div class="flex gap-4 pt-4">
+                            <div class="flex-1 p-5 rounded-2xl bg-brand-purple-light/50 border border-brand-purple/10">
+                                <i class="fa-solid fa-graduation-cap text-brand-purple text-xl mb-3 block"></i>
+                                <p class="text-sm font-bold text-brand-dark">Formación Médica</p>
+                                <p class="text-xs text-gray-500 mt-1">Especialista certificada</p>
+                            </div>
+                            <div class="flex-1 p-5 rounded-2xl bg-brand-mint/50 border border-brand-mint">
+                                <i class="fa-solid fa-heart-pulse text-brand-purple text-xl mb-3 block"></i>
+                                <p class="text-sm font-bold text-brand-dark">Misión Humana</p>
+                                <p class="text-xs text-gray-500 mt-1">Atención personalizada</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="py-24 bg-brand-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl lg:text-5xl font-serif text-brand-dark mb-4">Servicios Especializados</h2>
+                <p class="text-gray-500 max-w-xl mx-auto">Soluciones integrales para la salud y el bienestar de los más pequeños de la casa.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                
+                <!-- Service Card 1 -->
+                <div class="group bg-white p-10 rounded-[2.5rem] shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:-translate-y-2">
+                    <div class="w-16 h-16 rounded-2xl bg-brand-purple-light flex items-center justify-center mb-8 transform group-hover:rotate-6 transition-transform">
+                        <i class="fa-solid fa-stethoscope text-2xl text-brand-purple"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif text-brand-dark mb-4">Control del Niño Sano</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-8">
+                        Seguimiento exhaustivo del crecimiento y desarrollo físico y cognitivo para asegurar un futuro brillante.
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-3 text-sm text-gray-600">
+                             <div class="w-1.5 h-1.5 rounded-full bg-brand-gold"></div> Evaluaciones mensuales
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-gray-600">
+                             <div class="w-1.5 h-1.5 rounded-full bg-brand-gold"></div> Desarrollo motor
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="group bg-white p-10 rounded-[2.5rem] shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:-translate-y-2">
+                    <div class="w-16 h-16 rounded-2xl bg-brand-mint flex items-center justify-center mb-8 transform group-hover:rotate-6 transition-transform">
+                        <i class="fa-solid fa-syringe text-2xl text-brand-purple"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif text-brand-dark mb-4">Vacunación</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-8">
+                        Protección vital a través de esquemas de vacunación completos y actualizados para todas las edades.
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-3 text-sm text-gray-600">
+                             <div class="w-1.5 h-1.5 rounded-full bg-brand-gold"></div> Esquema nacional e internacional
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-gray-600">
+                             <div class="w-1.5 h-1.5 rounded-full bg-brand-gold"></div> Certificados oficiales
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="group bg-white p-10 rounded-[2.5rem] shadow-sm hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:-translate-y-2">
+                    <div class="w-16 h-16 rounded-2xl bg-[#fdf2f2] flex items-center justify-center mb-8 transform group-hover:rotate-6 transition-transform">
+                        <i class="fa-solid fa-apple-whole text-2xl text-red-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif text-brand-dark mb-4">Nutrición y Lactancia</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-8">
+                        Asesoría experta en alimentación complementaria y apoyo dedicado a la lactancia materna.
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center gap-3 text-sm text-gray-600">
+                             <div class="w-1.5 h-1.5 rounded-full bg-brand-gold"></div> Técnicas de acople
+                        </li>
+                        <li class="flex items-center gap-3 text-sm text-gray-600">
+                             <div class="w-1.5 h-1.5 rounded-full bg-brand-gold"></div> Menús saludables
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery / Interaction Section -->
+    <section id="galeria" class="py-24 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                <div class="lg:col-span-5">
+                    <h2 class="text-4xl font-serif text-brand-dark mb-6">Momentos que Importan</h2>
+                    <p class="text-gray-600 mb-10 text-lg leading-relaxed">
+                        Nuestro consultorio está diseñado para que los niños se sientan en confianza y los padres encuentren la seguridad que necesitan.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-brand-bg border border-gray-50">
+                            <div class="w-10 h-10 rounded-full bg-brand-gold/10 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-check text-brand-gold"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-brand-dark">Ambiente Amigable</h4>
+                                <p class="text-xs text-gray-500 mt-1">Juguetes y decoración pensada en ellos.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 p-4 rounded-2xl bg-brand-bg border border-gray-50">
+                            <div class="w-10 h-10 rounded-full bg-brand-gold/10 flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-check text-brand-gold"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-brand-dark">Equipamiento Moderno</h4>
+                                <p class="text-xs text-gray-500 mt-1">Tecnología de punta para el diagnóstico.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-7">
+                    <div class="grid grid-cols-2 gap-6 h-[500px]">
+                        <div class="relative rounded-[2.50rem] overflow-hidden group">
+                           <img src="images/dra_genesis_interaction_variant_v3_1774305736004.png" class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-110" alt="Consulta" />
+                        </div>
+                        <div class="grid grid-rows-2 gap-6">
+                            <div class="relative rounded-[2.50rem] overflow-hidden group">
+                                <img src="images/dra_genesis_consultation_variant_v3_1774305708761.png" class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-110" alt="Dra. Génesis" />
+                            </div>
+                            <div class="relative rounded-[2.50rem] overflow-hidden group">
+                                <img src="images/dra_genesis_examining_child_v5_1774307264289.png" class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-110" alt="Dra. Génesis - Examinando Niño" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-24 bg-brand-purple text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 p-20 opacity-10">
+            <i class="fa-solid fa-quote-right text-[200px]"></i>
+        </div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h2 class="text-4xl lg:text-5xl font-serif mb-16 underline decoration-brand-gold underline-offset-8">Lo que dicen las familias</h2>
+            
+            <div class="space-y-12">
+                <div class="animate__animated animate__fadeIn">
+                    <p class="text-2xl italic font-serif leading-relaxed mb-10 opacity-90">
+                        "La Dra. Génesis no solo es una excelente profesional, sino que tiene un don especial con los niños. Mi hijo se siente feliz cuando va a consulta, y eso como madre no tiene precio."
+                    </p>
+                    <div class="flex flex-col items-center">
+                        <div class="w-16 h-16 rounded-full border-2 border-brand-gold p-1 mb-4">
+                            <img src="https://randomuser.me/api/portraits/women/4.jpg" class="w-full h-full rounded-full object-cover" alt="Testimonio" />
+                        </div>
+                        <h4 class="text-xl font-bold tracking-wide">Mariana S.</h4>
+                        <p class="text-xs uppercase tracking-widest text-brand-purple-light opacity-60">Madre de Mateo</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Simple Nav -->
+            <div class="flex justify-center gap-1.5 mt-16">
+                <div class="w-3 h-3 rounded-full bg-brand-gold"></div>
+                <div class="w-3 h-3 rounded-full bg-white/20"></div>
+                <div class="w-3 h-3 rounded-full bg-white/20"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-24">
+                
+                <div>
+                    <h2 class="text-4xl lg:text-5xl font-serif text-brand-dark mb-8">Hablemos de tus hijos</h2>
+                    <p class="text-gray-500 mb-12 text-lg">
+                        Estoy lista para acompañarte en cada etapa del crecimiento de lo más valioso que tienes.
+                    </p>
+
+                    <div class="space-y-10">
+                        <div class="flex items-center gap-6">
+                            <div class="w-14 h-14 rounded-2xl bg-brand-purple-light flex items-center justify-center shrink-0">
+                                <i class="fa-brands fa-whatsapp text-2xl text-brand-purple"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-gray-400 uppercase tracking-widest">WhatsApp</p>
+                                <a href="https://wa.me/584148533702" class="text-xl font-medium text-brand-dark hover:text-brand-purple transition">+58 414 8533702</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-6">
+                            <div class="w-14 h-14 rounded-2xl bg-brand-mint flex items-center justify-center shrink-0">
+                                <i class="fa-brands fa-instagram text-2xl text-brand-purple"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-gray-400 uppercase tracking-widest">Instagram</p>
+                                <a href="https://instagram.com/gene_pediatra" class="text-xl font-medium text-brand-dark hover:text-brand-purple transition">@gene_pediatra</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-6">
+                            <div class="w-14 h-14 rounded-2xl bg-[#fff7ed] flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-location-dot text-2xl text-brand-purple"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-gray-400 uppercase tracking-widest">Ubicación</p>
+                                <p class="text-xl font-medium text-brand-dark">Consultorio Génesis, Venezuela</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass p-10 lg:p-14 rounded-[3rem] shadow-2xl">
+                    <h3 class="text-2xl font-serif text-brand-dark mb-8 text-center text-elegant-underline">Envía un Mensaje</h3>
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="text-xs font-bold text-gray-500 uppercase ml-1">Nombre</label>
+                                <input type="text" placeholder="Ej. Ana Pérez" class="w-full px-5 py-4 rounded-2xl bg-white border border-gray-100 focus:outline-none focus:ring-2 focus:ring-brand-purple text-sm transition">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-xs font-bold text-gray-500 uppercase ml-1">Teléfono</label>
+                                <input type="text" placeholder="+58..." class="w-full px-5 py-4 rounded-2xl bg-white border border-gray-100 focus:outline-none focus:ring-2 focus:ring-brand-purple text-sm transition">
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-xs font-bold text-gray-500 uppercase ml-1">Correo (Opcional)</label>
+                            <input type="email" placeholder="email@ejemplo.com" class="w-full px-5 py-4 rounded-2xl bg-white border border-gray-100 focus:outline-none focus:ring-2 focus:ring-brand-purple text-sm transition">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-xs font-bold text-gray-500 uppercase ml-1">Consulta / Mensaje</label>
+                            <textarea rows="4" placeholder="Cuéntame cómo puedo ayudarte..." class="w-full px-5 py-4 rounded-2xl bg-white border border-gray-100 focus:outline-none focus:ring-2 focus:ring-brand-purple text-sm transition resize-none"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-brand-dark hover:bg-black text-white py-5 rounded-2xl font-bold transition-all shadow-lg transform active:scale-95 flex items-center justify-center gap-3">
+                            Enviar Mensaje <i class="fa-solid fa-paper-plane text-xs"></i>
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-bg pt-20 pb-10 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="w-16 h-16 rounded-full bg-gradient-to-tr from-brand-purple-light to-brand-gold/20 flex items-center justify-center mx-auto mb-10">
+                <i class="fa-solid fa-heart text-brand-purple text-xl animate-pulse"></i>
+            </div>
+            
+            <div class="flex flex-wrap justify-center gap-10 mb-12">
+                <a href="#" class="text-sm font-medium text-gray-500 hover:text-brand-purple transition">Inicio</a>
+                <a href="#about" class="text-sm font-medium text-gray-500 hover:text-brand-purple transition">Sobre Mí</a>
+                <a href="#servicios" class="text-sm font-medium text-gray-500 hover:text-brand-purple transition">Servicios</a>
+                <a href="#galeria" class="text-sm font-medium text-gray-500 hover:text-brand-purple transition">Galería</a>
+                <a href="#contacto" class="text-sm font-medium text-gray-500 hover:text-brand-purple transition">Contacto</a>
+            </div>
+
+            <div class="border-t border-gray-100/50 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-xs text-gray-400">&copy; 2024 Dra. Génesis Carreño. Todos los derechos reservados.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-8 h-8 rounded-full bg-white shadow-sm flex items-center justify-center text-brand-dark hover:text-brand-purple transition"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="w-8 h-8 rounded-full bg-white shadow-sm flex items-center justify-center text-brand-dark hover:text-brand-purple transition"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/584148533702" class="floating-whatsapp" title="Escríbenos por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+</body>
+</html>
