@@ -150,6 +150,20 @@
         </div>
     </nav>
 
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="hidden md:hidden fixed top-20 left-0 w-full h-[calc(100vh-5rem)] bg-white/95 backdrop-blur-xl z-40 p-8 flex-col space-y-6 items-center pt-12 border-t border-gray-100 shadow-2xl animate__animated animate__fadeIn">
+        <a href="#" class="mobile-nav-link text-brand-dark font-serif font-bold text-2xl">Inicio</a>
+        <a href="#about" class="mobile-nav-link text-gray-500 font-medium text-lg">Sobre Mí</a>
+        <a href="#servicios" class="mobile-nav-link text-gray-500 font-medium text-lg">Servicios</a>
+        <a href="#galeria" class="mobile-nav-link text-gray-500 font-medium text-lg">Galería</a>
+        <a href="#contacto" class="mobile-nav-link text-gray-500 font-medium text-lg">Contáctanos</a>
+        <div class="mt-8 w-full pt-8 border-t border-gray-200 text-center">
+            <a href="https://wa.me/584148533702" class="bg-brand-purple hover:bg-brand-dark text-white px-10 py-4 rounded-full font-medium w-full block shadow-lg">
+                Agendar Cita Rápidamente
+            </a>
+        </div>
+    </div>
+
     <!-- Hero Section -->
     <section class="relative min-h-[85vh] flex items-center hero-gradient overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10 w-full">
@@ -169,19 +183,6 @@
                     <a href="#servicios" class="bg-white/80 backdrop-blur hover:bg-white text-brand-dark px-10 py-4 rounded-full font-semibold transition-all border border-gray-100 shadow-sm">
                         Ver Servicios
                     </a>
-                </div>
-                
-                <!-- Simple Badges -->
-                <div class="mt-16 flex items-center gap-8 border-t border-gray-200/50 pt-8">
-                    <div>
-                        <span class="block text-2xl font-bold text-brand-dark">10+</span>
-                        <span class="text-xs text-gray-400 font-medium uppercase tracking-tighter">Años Experiencia</span>
-                    </div>
-                    <div class="h-8 w-px bg-gray-200"></div>
-                    <div>
-                        <span class="block text-2xl font-bold text-brand-dark">1K+</span>
-                        <span class="text-xs text-gray-400 font-medium uppercase tracking-tighter">Pacientes Felices</span>
-                    </div>
                 </div>
             </div>
         </div>
@@ -485,5 +486,31 @@
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
+    <script>
+        // Mobile Menu Functionality
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileIcon = mobileBtn.querySelector('i');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function toggleMenu() {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+            
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileIcon.classList.replace('fa-xmark', 'fa-bars-staggered');
+                document.body.style.overflow = 'auto';
+            } else {
+                mobileIcon.classList.replace('fa-bars-staggered', 'fa-xmark');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        mobileBtn.addEventListener('click', toggleMenu);
+        
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', toggleMenu);
+        });
+    </script>
 </body>
 </html>
