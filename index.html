@@ -49,9 +49,9 @@
         }
 
         .hero-gradient {
-            background: linear-gradient(rgba(253, 252, 251, 0.8), rgba(253, 252, 251, 0.4)), url('images/dra_genesis_banner_variant_v3_1774305720970.png');
+            background: linear-gradient(rgba(253, 252, 251, 0.8), rgba(253, 252, 251, 0.4)), url('images/dra_genesis_banner_variant_v3_1774305720970%20(1).png');
             background-size: cover;
-            background-position: center;
+            background-position: center 20%;
         }
 
         .nav-link {
@@ -135,7 +135,7 @@
 
                 <!-- CTA Button -->
                 <div class="hidden md:flex">
-                    <a href="https://wa.me/584148533702" target="_blank" class="bg-brand-purple hover:bg-brand-dark text-white px-7 py-3 rounded-full font-medium text-sm transition-all shadow-md hover:shadow-lg transform active:scale-95">
+                    <a href="#contacto" class="bg-brand-purple hover:bg-brand-dark text-white px-7 py-3 rounded-full font-medium text-sm transition-all shadow-md hover:shadow-lg transform active:scale-95">
                         Agendar Cita
                     </a>
                 </div>
@@ -158,7 +158,7 @@
         <a href="#galeria" class="mobile-nav-link text-gray-500 font-medium text-lg">Galería</a>
         <a href="#contacto" class="mobile-nav-link text-gray-500 font-medium text-lg">Contáctanos</a>
         <div class="mt-8 w-full pt-8 border-t border-gray-200 text-center">
-            <a href="https://wa.me/584148533702" class="bg-brand-purple hover:bg-brand-dark text-white px-10 py-4 rounded-full font-medium w-full block shadow-lg">
+            <a href="#contacto" class="mobile-nav-link bg-brand-purple hover:bg-brand-dark text-white px-10 py-4 rounded-full font-medium w-full block shadow-lg">
                 Agendar Cita Rápidamente
             </a>
         </div>
@@ -203,7 +203,13 @@
                     </div>
                 </div>
                 <div class="w-full lg:w-1/2 animate__animated animate__fadeInRight">
-                    <h2 class="text-4xl lg:text-5xl font-serif text-brand-dark mb-8 elegant-underline">Sobre la Doctora</h2>
+                    <h2 class="text-4xl lg:text-5xl font-serif text-brand-dark mb-10 elegant-underline">Sobre la Doctora</h2>
+                    
+                    <blockquote class="border-l-4 border-brand-gold pl-6 py-4 mb-8 bg-gradient-to-r from-brand-gold/10 to-transparent rounded-r-3xl italic text-xl sm:text-2xl font-serif text-brand-dark leading-snug">
+                        "Todas las personas grandes <br class="hidden sm:block"/> <span class="text-brand-purple opacity-90">han sido niños antes</span>."
+                        <span class="block text-sm font-sans text-brand-gold mt-3 not-italic font-bold tracking-wider uppercase text-xs">— Antoine de Saint-Exupéry</span>
+                    </blockquote>
+
                     <div class="space-y-6 text-gray-600 leading-loose text-lg">
                         <p>
                             Soy la <strong>Dra. Génesis Carreño</strong>, una pediatra apasionada por el bienestar infantil. Mi compromiso es ofrecer una atención médica de la más alta calidad, fundamentada en la empatía y la actualización científica constante.
@@ -357,26 +363,134 @@
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
             <h2 class="text-4xl lg:text-5xl font-serif mb-16 underline decoration-brand-gold underline-offset-8">Lo que dicen las familias</h2>
             
-            <div class="space-y-12">
-                <div class="animate__animated animate__fadeIn">
-                    <p class="text-2xl italic font-serif leading-relaxed mb-10 opacity-90">
-                        "La Dra. Génesis no solo es una excelente profesional, sino que tiene un don especial con los niños. Mi hijo se siente feliz cuando va a consulta, y eso como madre no tiene precio."
-                    </p>
-                    <div class="flex flex-col items-center">
-                        <div class="w-16 h-16 rounded-full border-2 border-brand-gold p-1 mb-4">
-                            <img src="https://randomuser.me/api/portraits/women/4.jpg" class="w-full h-full rounded-full object-cover" alt="Testimonio" />
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                
+                <!-- Testimonio 1 -->
+                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-3xl border border-white/20 hover:bg-white/20 transition-all flex flex-col justify-between h-full animate__animated animate__fadeInUp">
+                    <div>
+                        <div class="text-brand-gold mb-4 text-xl">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                         </div>
-                        <h4 class="text-xl font-bold tracking-wide">Mariana S.</h4>
-                        <p class="text-xs uppercase tracking-widest text-brand-purple-light opacity-60">Madre de Mateo</p>
+                        <p class="text-sm italic font-serif leading-relaxed mb-8 opacity-90 text-left">
+                            "La Dra. Génesis no solo es una excelente profesional, sino que tiene un don especial con los niños. Mi hijo se siente feliz cuando va a consulta."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4 text-left">
+                        <div class="w-12 h-12 rounded-full border-2 border-brand-gold p-0.5 shrink-0">
+                            <img src="https://randomuser.me/api/portraits/women/92.jpg" class="w-full h-full rounded-full object-cover" alt="Mariana S." />
+                        </div>
+                        <div>
+                            <h4 class="text-base font-bold tracking-wide">Mariana S.</h4>
+                            <p class="text-[10px] uppercase tracking-widest text-brand-purple-light opacity-80">Madre de Mateo</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Simple Nav -->
-            <div class="flex justify-center gap-1.5 mt-16">
-                <div class="w-3 h-3 rounded-full bg-brand-gold"></div>
-                <div class="w-3 h-3 rounded-full bg-white/20"></div>
-                <div class="w-3 h-3 rounded-full bg-white/20"></div>
+                <!-- Testimonio 2 -->
+                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-3xl border border-white/20 hover:bg-white/20 transition-all flex flex-col justify-between h-full animate__animated animate__fadeInUp" style="animation-delay: 0.1s;">
+                    <div>
+                        <div class="text-brand-gold mb-4 text-xl">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-sm italic font-serif leading-relaxed mb-8 opacity-90 text-left">
+                            "Como padres primerizos, teníamos mil dudas. Su paciencia para explicarnos todo nos dio una paz inmensa. Recomendada al 100%."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4 text-left">
+                        <div class="w-12 h-12 rounded-full border-2 border-brand-gold p-0.5 shrink-0">
+                            <img src="https://randomuser.me/api/portraits/men/44.jpg" class="w-full h-full rounded-full object-cover" alt="Familia Rojas" />
+                        </div>
+                        <div>
+                            <h4 class="text-base font-bold tracking-wide">Carlos R.</h4>
+                            <p class="text-[10px] uppercase tracking-widest text-brand-purple-light opacity-80">Papá de Sofía</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 3 -->
+                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-3xl border border-white/20 hover:bg-white/20 transition-all flex flex-col justify-between h-full animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
+                    <div>
+                        <div class="text-brand-gold mb-4 text-xl">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-sm italic font-serif leading-relaxed mb-8 opacity-90 text-left">
+                            "Responde nuestras inquietudes por WhatsApp rápido y el trato en consulta es inigualable. Hace ver todo como un juego."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4 text-left">
+                        <div class="w-12 h-12 rounded-full border-2 border-brand-gold p-0.5 shrink-0">
+                            <img src="https://randomuser.me/api/portraits/women/62.jpg" class="w-full h-full rounded-full object-cover" alt="Valeria M." />
+                        </div>
+                        <div>
+                            <h4 class="text-base font-bold tracking-wide">Valeria M.</h4>
+                            <p class="text-[10px] uppercase tracking-widest text-brand-purple-light opacity-80">Madre de Leo</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 4 -->
+                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-3xl border border-white/20 hover:bg-white/20 transition-all flex flex-col justify-between h-full animate__animated animate__fadeInUp" style="animation-delay: 0.3s;">
+                    <div>
+                        <div class="text-brand-gold mb-4 text-xl">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-sm italic font-serif leading-relaxed mb-8 opacity-90 text-left">
+                            "Llevo a mis dos hijos desde que nacieron. La calidez y la exactitud en sus diagnósticos me dan muchísima confianza."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4 text-left">
+                        <div class="w-12 h-12 rounded-full border-2 border-brand-gold p-0.5 shrink-0">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-full h-full rounded-full object-cover" alt="Daniela F." />
+                        </div>
+                        <div>
+                            <h4 class="text-base font-bold tracking-wide">Daniela F.</h4>
+                            <p class="text-[10px] uppercase tracking-widest text-brand-purple-light opacity-80">Madre de Santi y Andrés</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 5 -->
+                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-3xl border border-white/20 hover:bg-white/20 transition-all flex flex-col justify-between h-full animate__animated animate__fadeInUp" style="animation-delay: 0.4s;">
+                    <div>
+                        <div class="text-brand-gold mb-4 text-xl">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-sm italic font-serif leading-relaxed mb-8 opacity-90 text-left">
+                            "Muy dedicada. Revisa a mi niña de pies a cabeza en cada consulta. Explicaciones claras que uno como papá entiende perfectamente."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4 text-left">
+                        <div class="w-12 h-12 rounded-full border-2 border-brand-gold p-0.5 shrink-0">
+                            <img src="https://randomuser.me/api/portraits/men/33.jpg" class="w-full h-full rounded-full object-cover" alt="Miguel P." />
+                        </div>
+                        <div>
+                            <h4 class="text-base font-bold tracking-wide">Miguel P.</h4>
+                            <p class="text-[10px] uppercase tracking-widest text-brand-purple-light opacity-80">Papá de Elena</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 6 -->
+                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-3xl border border-white/20 hover:bg-white/20 transition-all flex flex-col justify-between h-full animate__animated animate__fadeInUp" style="animation-delay: 0.5s;">
+                    <div>
+                        <div class="text-brand-gold mb-4 text-xl">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-sm italic font-serif leading-relaxed mb-8 opacity-90 text-left">
+                            "Fue un alivio enorme encontrarla cuando mi bebé se enfermó. Su tratamiento fue acertado al primer instante. La amamos."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4 text-left">
+                        <div class="w-12 h-12 rounded-full border-2 border-brand-gold p-0.5 shrink-0">
+                            <img src="https://randomuser.me/api/portraits/women/24.jpg" class="w-full h-full rounded-full object-cover" alt="Carolina G." />
+                        </div>
+                        <div>
+                            <h4 class="text-base font-bold tracking-wide">Carolina G.</h4>
+                            <p class="text-[10px] uppercase tracking-widest text-brand-purple-light opacity-80">Madre de Victoria</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -418,36 +532,36 @@
                                 <i class="fa-solid fa-location-dot text-2xl text-brand-purple"></i>
                             </div>
                             <div>
-                                <p class="text-xs font-bold text-gray-400 uppercase tracking-widest">Ubicación</p>
-                                <p class="text-xl font-medium text-brand-dark">Consultorio Génesis, Venezuela</p>
+                                <p class="text-xs font-bold text-gray-400 uppercase tracking-widest">Consultorio</p>
+                                <p class="text-lg font-medium text-brand-dark leading-snug">Clínica Santa Anata. Planta Alta.<br/>Consultorio 31A. <span class="text-brand-purple font-bold">Previa cita.</span></p>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="glass p-10 lg:p-14 rounded-[3rem] shadow-2xl">
-                    <h3 class="text-2xl font-serif text-brand-dark mb-8 text-center text-elegant-underline">Envía un Mensaje</h3>
-                    <form class="space-y-6">
+                    <h3 class="text-2xl font-serif text-brand-dark mb-8 text-center text-elegant-underline leading-snug">Agenda una cita<br>por medio de este formulario</h3>
+                    <form id="wa-form" class="space-y-6">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div class="space-y-2">
                                 <label class="text-xs font-bold text-gray-500 uppercase ml-1">Nombre</label>
-                                <input type="text" placeholder="Ej. Ana Pérez" class="w-full px-5 py-4 rounded-2xl bg-white border border-gray-100 focus:outline-none focus:ring-2 focus:ring-brand-purple text-sm transition">
+                                <input type="text" id="wa-name" required placeholder="Ej. Ana Pérez" class="w-full px-5 py-4 rounded-2xl bg-white border border-gray-100 focus:outline-none focus:ring-2 focus:ring-[#25d366] text-sm transition">
                             </div>
                             <div class="space-y-2">
                                 <label class="text-xs font-bold text-gray-500 uppercase ml-1">Teléfono</label>
-                                <input type="text" placeholder="+58..." class="w-full px-5 py-4 rounded-2xl bg-white border border-gray-100 focus:outline-none focus:ring-2 focus:ring-brand-purple text-sm transition">
+                                <input type="tel" id="wa-phone" required placeholder="+58..." class="w-full px-5 py-4 rounded-2xl bg-white border border-gray-100 focus:outline-none focus:ring-2 focus:ring-[#25d366] text-sm transition">
                             </div>
                         </div>
                         <div class="space-y-2">
                             <label class="text-xs font-bold text-gray-500 uppercase ml-1">Correo (Opcional)</label>
-                            <input type="email" placeholder="email@ejemplo.com" class="w-full px-5 py-4 rounded-2xl bg-white border border-gray-100 focus:outline-none focus:ring-2 focus:ring-brand-purple text-sm transition">
+                            <input type="email" id="wa-email" placeholder="email@ejemplo.com" class="w-full px-5 py-4 rounded-2xl bg-white border border-gray-100 focus:outline-none focus:ring-2 focus:ring-[#25d366] text-sm transition">
                         </div>
                         <div class="space-y-2">
                             <label class="text-xs font-bold text-gray-500 uppercase ml-1">Consulta / Mensaje</label>
-                            <textarea rows="4" placeholder="Cuéntame cómo puedo ayudarte..." class="w-full px-5 py-4 rounded-2xl bg-white border border-gray-100 focus:outline-none focus:ring-2 focus:ring-brand-purple text-sm transition resize-none"></textarea>
+                            <textarea id="wa-message" required rows="4" placeholder="Cuéntame cómo puedo ayudarte..." class="w-full px-5 py-4 rounded-2xl bg-white border border-gray-100 focus:outline-none focus:ring-2 focus:ring-[#25d366] text-sm transition resize-none"></textarea>
                         </div>
-                        <button type="submit" class="w-full bg-brand-dark hover:bg-black text-white py-5 rounded-2xl font-bold transition-all shadow-lg transform active:scale-95 flex items-center justify-center gap-3">
-                            Enviar Mensaje <i class="fa-solid fa-paper-plane text-xs"></i>
+                        <button type="submit" class="w-full bg-[#25d366] hover:bg-[#20ba59] text-white py-5 rounded-2xl font-bold transition-all shadow-[0_4px_15px_rgba(37,211,102,0.3)] transform active:scale-95 flex items-center justify-center gap-3">
+                            Enviar <i class="fa-brands fa-whatsapp text-xl"></i>
                         </button>
                     </form>
                 </div>
@@ -510,6 +624,32 @@
         
         mobileNavLinks.forEach(link => {
             link.addEventListener('click', toggleMenu);
+        });
+
+        // WhatsApp Form Logic
+        document.getElementById('wa-form').addEventListener('submit', function(e) {
+            e.preventDefault(); // Evita recargar la página
+
+            // Recolectar datos
+            const name = document.getElementById('wa-name').value.trim();
+            const phone = document.getElementById('wa-phone').value.trim();
+            const email = document.getElementById('wa-email').value.trim();
+            const message = document.getElementById('wa-message').value.trim();
+
+            // Armar el texto del mensaje con formato WhatsApp
+            let waText = `¡Hola Dra. Génesis! Mi nombre es *${name}*.\n`;
+            waText += `Mi teléfono de contacto es: ${phone}\n`;
+            if (email) {
+                waText += `Mi correo electrónico es: ${email}\n`;
+            }
+            waText += `\n*Consulta:* \n${message}`;
+
+            // Codificar el texto para URL
+            const encodedText = encodeURIComponent(waText);
+            
+            // Redirigir a WhatsApp
+            const waUrl = `https://wa.me/584148533702?text=${encodedText}`;
+            window.open(waUrl, '_blank');
         });
     </script>
 </body>
