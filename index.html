@@ -4,6 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dra. Génesis Carreño | Pediatra Puericultor - Cuidado con Amor</title>
+    <meta name="description" content="Atención médica pediátrica especializada en la Clínica Santa Anata. Dra. Génesis Carreño, pediatra y puericultor enfocada en el desarrollo saludable de tus hijos.">
+    <meta name="keywords" content="pediatra, Dra. Génesis Carreño, pediatría, Clínica Santa Anata, control de niño sano, vacunas, lactancia, pediatra puericultor">
+    <link rel="canonical" href="https://dragenesiscarreno.com" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://dragenesiscarreno.com/">
+    <meta property="og:title" content="Dra. Génesis Carreño | Pediatra Puericultor">
+    <meta property="og:description" content="Especialista en el cuidado y desarrollo integral infantil. Agenda tu cita en la Clínica Santa Anata.">
+    <meta property="og:image" content="images/dra_genesis_banner_variant_v3_1774305720970%20(1).png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Dra. Génesis Carreño | Pediatra Puericultor">
+    <meta property="twitter:description" content="Especialista en el cuidado y desarrollo integral infantil. Agenda tu cita en la Clínica Santa Anata.">
+    <meta property="twitter:image" content="images/dra_genesis_banner_variant_v3_1774305720970%20(1).png">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Physician",
+      "name": "Dra. Génesis Carreño",
+      "image": "images/dra_genesis_final_portrait_1774305329455.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Planta Alta. Consultorio 31A",
+        "addressLocality": "Clínica Santa Anata",
+        "addressCountry": "Venezuela"
+      },
+      "telephone": "+584148533702",
+      "url": "https://dragenesiscarreno.com",
+      "medicalSpecialty": "Pediatrics"
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <!-- FontAwesome for standard icons -->
@@ -593,7 +629,27 @@
         mobileBtn.addEventListener('click', toggleMenu);
         
         mobileNavLinks.forEach(link => {
-            link.addEventListener('click', toggleMenu);
+            link.addEventListener('click', () => {
+                if (!mobileMenu.classList.contains('hidden')) {
+                    toggleMenu();
+                }
+                
+                // Si el link es para el formulario, darle foco al nombre después del scroll
+                if (link.getAttribute('href') === '#contacto') {
+                    setTimeout(() => {
+                        document.getElementById('wa-name').focus();
+                    }, 800);
+                }
+            });
+        });
+
+        // Aplicar foco al formulario también desde botones de desktop
+        document.querySelectorAll('a[href="#contacto"]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                setTimeout(() => {
+                    document.getElementById('wa-name').focus();
+                }, 800);
+            });
         });
 
         // WhatsApp Form Logic
